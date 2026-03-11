@@ -1,0 +1,9 @@
+curl -F "image=@/home/sauravp/Desktop/github/media-handler/public/test-image-high-volume.png" \
+     -F "width=500" -F "height=500" -F "x=0" -F "y=0" \
+     http://localhost:8000/images/crop-sync & \
+curl -F "image=@/home/sauravp/Desktop/github/media-handler/public/test-image-high-volume.png" \
+     -F "width=500" -F "height=500" -F "x=100" -F "y=100" \
+     http://localhost:8000/images/crop-sync & \
+curl -F "image=@/home/sauravp/Desktop/github/media-handler/public/test-image-high-volume.png" \
+     -F "width=500" -F "height=500" -F "x=200" -F "y=200" \
+     http://localhost:8000/images/crop-sync

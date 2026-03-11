@@ -1,0 +1,76 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Processed Successfully</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+        background: #f4f4f9;
+      }
+      .container {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 80%;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        margin: 20px 0;
+        border-radius: 4px;
+      }
+      .btn {
+        display: inline-block;
+        background: #007bff;
+        color: white;
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+      .btn:hover {
+        background: #0056b3;
+      }
+      .meta {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Processing Complete!</h1>
+      <p class="meta">File: {{filename}}</p>
+
+      <div class="preview">
+        <img
+          src="{{fileUrl}}"
+          refferpolicy="no-referrer"
+          alt="Cropped Result"
+        />
+      </div>
+
+      <br />
+
+      <a href="{{fileUrl}}" download="{{fileName}}" class="btn">
+        Download Cropped Image
+      </a>
+
+      <div style="margin-top: 20px;">
+        <a href="/crop/images" style="color: #666;">Upload another image</a>
+      </div>
+    </div>
+
+  </body>
+</html>
